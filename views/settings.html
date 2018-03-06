@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="./styles/volare.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/settings.css" />
+</head>
+
+<body>
+    <left>
+        <ul>
+            <li class="heading">
+                Settings
+                <a id="save" class="btn btn-success pull-right">Save</a>
+                <li>
+                    <label class="item-key" for="videoUrl">Video URL</label>
+                    <input class="item x-large" id="videoUrl" type="text" name="videoUrl" value="{{ videoUrl }}">
+                </li>
+                <li>
+                    <label class="item-key" for="imageUrl">Background Image URL</label>
+                    <input class="item x-large" id="imageUrl" type="text" name="imageUrl" value="{{ imageUrl }}">
+                </li>
+                <li>
+                    <label class="item-key" for="timer">Countdown Timer (s)</label>
+                    <input class="item x-large" type="number" name="timer" min="0" value="{{ timer }}">
+                </li>
+                <li>
+                    <label class="item-key" for="preCount">Before Countdown</label>
+                    <input class="item x-large" id="preCount" type="text" name="preCount" value="{{ preCount }}">
+                </li>
+                <li>
+                    <label class="item-key" for="leftCount">Left of Countdown</label>
+                    <input class="item x-large" id="leftCount" type="text" name="leftCount" value="{{ leftCount }}">
+                </li>
+                <li>
+                    <label class="item-key" for="rightCount">Right of Countdown</label>
+                    <input class="item x-large" id="rightCount" type="text" name="rightCount" value="{{ rightCount }}">
+                </li>
+                <li>
+                    <label class="item-key" for="postCount">After Countdown</label>
+                    <input class="item x-large" id="postCount" type="text" name="postCount" value="{{ postCount }}">
+                </li>
+                <li>
+                    <label class="item-key" for="continueBtn">Button Text</label>
+                    <input class="item x-large" id="continueBtn" type="text" name="continueBtn" value="{{ continueBtn }}">
+                </li>
+                <li>
+                    <a id="logs-btn" href="data/{{ tenant }}.txt" class="btn pull-right" target="_blank">Download Logs</a>
+                </li>
+                <input type="hidden" id="tenantInput" name="tenantId" value={{ tenant }}>
+        </ul>
+    </left>
+    <right>
+        <screen>
+            <posterwrapper>
+                <poster>
+                    <postercontent id="imagePreview">
+                        <image src="./images/play_button.svg" />
+                    </postercontent>
+                </poster>
+            </posterwrapper>
+            <videowrapper id="videoPreview">
+            </videowrapper>
+            <div class="continue-button"></div>
+        </screen>
+    </right>
+    <script src="./scripts/settings.js"></script>
+</body>
+
+</html>

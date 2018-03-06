@@ -1,0 +1,163 @@
+body, html {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+poster {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: transparent;
+}
+
+posterwrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: transparent;
+}
+
+postercontent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 150%;
+}
+
+poster svg {
+    width: 20%;
+    height: 20%;
+    fill: white;
+    cursor: pointer;
+    margin-bottom: 40px;
+    stroke-width: 10%;
+}
+
+poster svg:hover {
+    transform: scale(1.1);
+}
+
+videowrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 15;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-content: center;
+    align-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+video {
+    width: 100%;
+    /* max-width: 1024px; */
+    display: inline-block;
+}
+
+videowrapper span {
+    width: 100%;
+    height: 1em;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.continue-message {
+    color: #aaa;
+    z-index: 11;
+    width:100%;
+    background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 0%, #000 100%);
+    background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0) 0%, #000 100%);
+    background-image: linear-gradient(bottom, rgba(0,0,0,0) 0%, #000 100%);
+    text-align:center;
+    display: block;
+    height:30px;
+    padding-top:10px;
+    margin-bottom:10px;
+}
+
+.continue-button {
+    color: #aaa;
+    z-index: 11;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3em;
+    padding-right: 3em;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    text-align:center;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.continue-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* Hide the native player button */
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
